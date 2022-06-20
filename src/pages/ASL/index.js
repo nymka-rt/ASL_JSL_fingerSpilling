@@ -31,7 +31,7 @@ export default function Home() {
 
   let signList = [];
   let currentSign = 0;
-
+  let nameOfSign = [];
   let gamestate = "started";
 
   // let net;
@@ -116,7 +116,9 @@ export default function Home() {
           Handsigns.wSign,
           Handsigns.xSign,
           Handsigns.ySign,
-          Handsigns.zSign,
+          Handsigns.z1Sign,
+          Handsigns.z2Sign,
+          Handsigns.z3Sign,
         ]);
 
         const estimatedGestures = await GE.estimate(hand[0].landmarks, 6.5);
@@ -162,8 +164,6 @@ export default function Home() {
               return;
             }
 
-            console.log(estimatedGestures.gestures[maxConfidence].name);
-
             //game play state
 
             if (
@@ -173,7 +173,18 @@ export default function Home() {
               document
                 .getElementById("emojimage")
                 .setAttribute("src", signList[currentSign].src);
-              if (
+              if (signList[currentSign].alt.length > 2) {
+                nameOfSign.push =
+                  estimatedGestures.gestures[maxConfidence].name;
+                console.log(nameOfSign);
+                if (signList[currentSign].alt.length < nameOfSign.length) {
+                  nameOfSign = [];
+                }
+                if (signList[currentSign].alt === nameOfSign) {
+                  currentSign++;
+                  nameOfSign = [];
+                }
+              } else if (
                 signList[currentSign].alt ===
                 estimatedGestures.gestures[maxConfidence].name
               ) {

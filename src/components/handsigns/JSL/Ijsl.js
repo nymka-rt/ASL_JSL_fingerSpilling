@@ -5,7 +5,7 @@ import {
   GestureDescription,
 } from "fingerpose";
 
-export const ISign = new GestureDescription("い");
+export const ISign = new GestureDescription("I  ");
 // [
 //     [
 //       "Thumb",

@@ -75,7 +75,8 @@ export default function Home() {
       const video = webcamRef.current.video;
       const videoWidth = webcamRef.current.video.videoWidth;
       const videoHeight = webcamRef.current.video.videoHeight;
-
+      console.log(Signpass[0].alt);
+      console.log(Signpass[0].alt.length);
       // Set video width
       webcamRef.current.video.width = videoWidth;
       webcamRef.current.video.height = videoHeight;
@@ -92,6 +93,7 @@ export default function Home() {
         const GE = new fp.GestureEstimator([
           fp.Gestures.ThumbsUpGesture,
           Handsigns.ASign,
+          Handsigns.ISign,
         ]);
 
         const estimatedGestures = await GE.estimate(hand[0].landmarks, 6.5);

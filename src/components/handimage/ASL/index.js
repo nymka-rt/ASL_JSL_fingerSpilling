@@ -184,6 +184,6 @@ export const Signpass = [
   },
   {
     src: Z_hand,
-    alt: "Z",
+    alt: ["Z1", "Z2", "Z3", "Z2"],
   },
 ];
