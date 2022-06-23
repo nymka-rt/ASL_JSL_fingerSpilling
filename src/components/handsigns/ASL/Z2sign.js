@@ -44,12 +44,12 @@ z2Sign.addDirection(Finger.Index, FingerDirection.DiagonalUpLeft, 0.7);
 
 //Middle
 z2Sign.addCurl(Finger.Middle, FingerCurl.FullCurl, 1);
-z2Sign.addDirection(Finger.Middle, FingerDirection.HorizontalRight, 0.7);
+z2Sign.addDirection(Finger.Middle, FingerDirection.HorizontalLeft, 0.7);
 
 //Ring
 z2Sign.addCurl(Finger.Ring, FingerCurl.FullCurl, 1);
-z2Sign.addDirection(Finger.Ring, FingerDirection.HorizontalRight, 0.7);
+z2Sign.addDirection(Finger.Ring, FingerDirection.HorizontalLeft, 0.7);
 
 //Pinky
 z2Sign.addCurl(Finger.Pinky, FingerCurl.FullCurl, 1);
-z2Sign.addDirection(Finger.Pinky, FingerDirection.HorizontalRight, 0.7);
+z2Sign.addDirection(Finger.Pinky, FingerDirection.HorizontalLeft, 0.7);

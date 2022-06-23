@@ -33,6 +33,8 @@ export default function Home() {
   let currentSign = 0;
   let nameOfSign = [];
   let gamestate = "started";
+  let signLength = 0;
+  let signLengthLimit = 0;
 
   // let net;
 
@@ -48,7 +50,6 @@ export default function Home() {
   }
   function _signList() {
     signList = generateSigns();
-    console.log(signList);
   }
 
   function shuffle(a) {
@@ -173,16 +174,25 @@ export default function Home() {
               document
                 .getElementById("emojimage")
                 .setAttribute("src", signList[currentSign].src);
+              signLengthLimit++;
               if (signList[currentSign].alt.length > 2) {
-                nameOfSign.push =
-                  estimatedGestures.gestures[maxConfidence].name;
-                console.log(nameOfSign);
-                if (signList[currentSign].alt.length < nameOfSign.length) {
-                  nameOfSign = [];
+                console.log(estimatedGestures.gestures[maxConfidence].name);
+                for (let i = 0; i < signList[currentSign].alt.length; i++) {
+                  if (
+                    signList[currentSign].alt[i] ===
+                    estimatedGestures.gestures[maxConfidence].name
+                  ) {
+                    signLength++;
+                  }
                 }
-                if (signList[currentSign].alt === nameOfSign) {
+                console.log(`SignLenght==>${signLength}`);
+                console.log(`SignLenghtLImit==>${signLengthLimit}`);
+                if (signLengthLimit >= 100) {
+                  signLengthLimit = 0;
+                  signLength = 0;
+                }
+                if (signLength === signList[currentSign].alt.length) {
                   currentSign++;
-                  nameOfSign = [];
                 }
               } else if (
                 signList[currentSign].alt ===

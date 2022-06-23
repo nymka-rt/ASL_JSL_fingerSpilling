@@ -31,7 +31,9 @@ export default function Home() {
 
   let signList = [];
   let currentSign = 0;
-
+  let signLengthLimit = 0;
+  let signLength = 0;
+  let t = 0;
   let gamestate = "started";
 
   // let net;
@@ -48,7 +50,6 @@ export default function Home() {
   }
   function _signList() {
     signList = generateSigns();
-    console.log(signList);
   }
 
   function shuffle(a) {
@@ -75,8 +76,6 @@ export default function Home() {
       const video = webcamRef.current.video;
       const videoWidth = webcamRef.current.video.videoWidth;
       const videoHeight = webcamRef.current.video.videoHeight;
-      console.log(Signpass[0].alt);
-      console.log(Signpass[0].alt.length);
       // Set video width
       webcamRef.current.video.width = videoWidth;
       webcamRef.current.video.height = videoHeight;
@@ -94,6 +93,9 @@ export default function Home() {
           fp.Gestures.ThumbsUpGesture,
           Handsigns.ASign,
           Handsigns.ISign,
+          Handsigns.Z11Sign,
+          Handsigns.Z22Sign,
+          Handsigns.Z33Sign,
         ]);
 
         const estimatedGestures = await GE.estimate(hand[0].landmarks, 6.5);
@@ -138,9 +140,6 @@ export default function Home() {
               currentSign = 0;
               return;
             }
-
-            console.log(estimatedGestures.gestures[maxConfidence].name);
-
             //game play state
 
             if (
@@ -150,7 +149,29 @@ export default function Home() {
               document
                 .getElementById("emojimage")
                 .setAttribute("src", signList[currentSign].src);
-              if (
+              signLengthLimit++;
+              console.log(estimatedGestures.gestures[maxConfidence].name);
+
+              if (signList[currentSign].alt.length > 2) {
+                if (
+                  signList[currentSign].alt[t] ===
+                  estimatedGestures.gestures[maxConfidence].name
+                ) {
+                  t++;
+                  signLength++;
+                  console.log(`"sdaaaaaa"${t}`);
+                }
+
+                console.log(`SignLenght==>${signLength}`);
+                console.log(`SignLenghtLImit==>${signLengthLimit}`);
+                if (signLengthLimit >= 100) {
+                  signLengthLimit = 0;
+                  signLength = 0;
+                }
+                if (signLength === signList[currentSign].alt.length) {
+                  currentSign++;
+                }
+              } else if (
                 signList[currentSign].alt ===
                 estimatedGestures.gestures[maxConfidence].name
               ) {
