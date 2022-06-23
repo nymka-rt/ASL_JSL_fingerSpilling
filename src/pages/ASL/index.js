@@ -174,15 +174,21 @@ export default function Home() {
                 .getElementById("emojimage")
                 .setAttribute("src", signList[currentSign].src);
               if (signList[currentSign].alt.length > 2) {
-                nameOfSign.push =
-                  estimatedGestures.gestures[maxConfidence].name;
-                console.log(nameOfSign);
-                if (signList[currentSign].alt.length < nameOfSign.length) {
-                  nameOfSign = [];
-                }
-                if (signList[currentSign].alt === nameOfSign) {
-                  currentSign++;
-                  nameOfSign = [];
+                let signLength = 0;
+                for (let i = 0; i < signList[currentSign].alt.length; i++) {
+                  console.log(nameOfSign);
+                  if (
+                    signList[currentSign].alt[i] ===
+                    estimatedGestures.gestures[maxConfidence].name
+                  ) {
+                    signLength++;
+                  }
+                  if (signLength >= 100) {
+                    signLength = 0;
+                  }
+                  if (signLength === signList[currentSign].alt.length) {
+                    currentSign++;
+                  }
                 }
               } else if (
                 signList[currentSign].alt ===
