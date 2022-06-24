@@ -35,7 +35,7 @@ export const Z11Sign = new GestureDescription("Z11");
 //   ]
 
 //Thumb
-Z11Sign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 0.8);
+Z11Sign.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 0.8);
 Z11Sign.addDirection(Finger.Index, FingerDirection.HorizontalRight, 0.7);
 
 //Index

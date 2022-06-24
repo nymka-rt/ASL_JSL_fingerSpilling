@@ -96,6 +96,7 @@ export default function Home() {
           Handsigns.Z11Sign,
           Handsigns.Z22Sign,
           Handsigns.Z33Sign,
+          Handsigns.Z44Sign,
         ]);
 
         const estimatedGestures = await GE.estimate(hand[0].landmarks, 6.5);
@@ -153,6 +154,8 @@ export default function Home() {
               console.log(estimatedGestures.gestures[maxConfidence].name);
 
               if (signList[currentSign].alt.length > 2) {
+                console.log(signList[currentSign].alt);
+                console.log(`"----t-----"${t}`);
                 if (
                   signList[currentSign].alt[t] ===
                   estimatedGestures.gestures[maxConfidence].name
@@ -166,9 +169,13 @@ export default function Home() {
                 console.log(`SignLenghtLImit==>${signLengthLimit}`);
                 if (signLengthLimit >= 100) {
                   signLengthLimit = 0;
+                  t = 0;
                   signLength = 0;
                 }
                 if (signLength === signList[currentSign].alt.length) {
+                  signLengthLimit = 0;
+                  t = 0;
+                  signLength = 0;
                   currentSign++;
                 }
               } else if (

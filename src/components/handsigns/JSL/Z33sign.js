@@ -35,12 +35,12 @@ export const Z33Sign = new GestureDescription("Z33");
 //   ]
 
 //Thumb
-Z33Sign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 0.8);
+Z33Sign.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 0.8);
 Z33Sign.addDirection(Finger.Index, FingerDirection.HorizontalRight, 0.7);
 
 //Index
 Z33Sign.addCurl(Finger.Index, FingerCurl.NoCurl, 1);
-Z33Sign.addDirection(Finger.Index, FingerDirection.DiagonalDownRight, 0.7);
+Z33Sign.addDirection(Finger.Index, FingerDirection.HorizontalRight, 0.7);
 
 //Middle
 Z33Sign.addCurl(Finger.Middle, FingerCurl.FullCurl, 1);

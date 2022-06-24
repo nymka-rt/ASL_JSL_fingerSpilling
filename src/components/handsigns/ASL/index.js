@@ -26,6 +26,7 @@ import { ySign } from "./Ysign";
 import { z1Sign } from "./Z1sign";
 import { z2Sign } from "./Z2sign";
 import { z3Sign } from "./Z3sign";
+import { z4Sign } from "./Z4sign";
 
 const Handsigns = {
   aSign,
@@ -56,6 +57,7 @@ const Handsigns = {
   z1Sign,
   z2Sign,
   z3Sign,
+  z4Sign,
 };
 
 export default Handsigns;

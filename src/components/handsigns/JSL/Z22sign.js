@@ -35,7 +35,7 @@ export const Z22Sign = new GestureDescription("Z22");
 //   ]
 
 //Thumb
-Z22Sign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 0.8);
+Z22Sign.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 0.8);
 Z22Sign.addDirection(Finger.Index, FingerDirection.HorizontalLeft, 0.7);
 
 //Index

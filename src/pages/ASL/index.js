@@ -31,10 +31,10 @@ export default function Home() {
 
   let signList = [];
   let currentSign = 0;
-  let nameOfSign = [];
   let gamestate = "started";
-  let signLength = 0;
   let signLengthLimit = 0;
+  let signLength = 0;
+  let t = 0;
 
   // let net;
 
@@ -120,6 +120,7 @@ export default function Home() {
           Handsigns.z1Sign,
           Handsigns.z2Sign,
           Handsigns.z3Sign,
+          Handsigns.z4Sign,
         ]);
 
         const estimatedGestures = await GE.estimate(hand[0].landmarks, 6.5);
@@ -175,24 +176,29 @@ export default function Home() {
                 .getElementById("emojimage")
                 .setAttribute("src", signList[currentSign].src);
               signLengthLimit++;
+              console.log(estimatedGestures.gestures[maxConfidence].name);
               if (signList[currentSign].alt.length > 2) {
-                console.log(estimatedGestures.gestures[maxConfidence].name);
-                for (let i = 0; i < signList[currentSign].alt.length; i++) {
-                  if (
-                    signList[currentSign].alt[i] ===
-                    estimatedGestures.gestures[maxConfidence].name
-                  ) {
-                    signLength++;
-                  }
+                if (
+                  signList[currentSign].alt[t] ===
+                  estimatedGestures.gestures[maxConfidence].name
+                ) {
+                  t++;
+                  signLength++;
+                  console.log(`"sdaaaaaa"${t}`);
                 }
+
                 console.log(`SignLenght==>${signLength}`);
                 console.log(`SignLenghtLImit==>${signLengthLimit}`);
                 if (signLengthLimit >= 100) {
                   signLengthLimit = 0;
                   signLength = 0;
+                  t = 0;
                 }
                 if (signLength === signList[currentSign].alt.length) {
                   currentSign++;
+                  signLengthLimit = 0;
+                  signLength = 0;
+                  t = 0;
                 }
               } else if (
                 signList[currentSign].alt ===

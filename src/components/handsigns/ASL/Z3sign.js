@@ -40,7 +40,7 @@ z3Sign.addDirection(Finger.Index, FingerDirection.HorizontalRight, 0.7);
 
 //Index
 z3Sign.addCurl(Finger.Index, FingerCurl.NoCurl, 1);
-z3Sign.addDirection(Finger.Index, FingerDirection.DiagonalDownRight, 0.7);
+z3Sign.addDirection(Finger.Index, FingerDirection.HorizontalRight, 0.7);
 
 //Middle
 z3Sign.addCurl(Finger.Middle, FingerCurl.FullCurl, 1);

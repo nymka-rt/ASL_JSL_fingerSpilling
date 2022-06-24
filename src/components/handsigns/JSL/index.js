@@ -10,6 +10,7 @@ import { TaSign } from "./Tajsl";
 import { Z11Sign } from "./Z11sign";
 import { Z22Sign } from "./Z22sign";
 import { Z33Sign } from "./Z33sign";
+import { Z44Sign } from "./Z44sign";
 const Handsigns = {
   ASign,
   ISign,
@@ -23,6 +24,7 @@ const Handsigns = {
   Z11Sign,
   Z22Sign,
   Z33Sign,
+  Z44Sign,
 };
 
 export default Handsigns;
