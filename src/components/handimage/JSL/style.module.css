@@ -1,9 +1,0 @@
-.A_hand {
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Sign_language_A.svg/323px-Sign_language_A.svg.png);
-  background-size: 100%;
-  display: block;
-  width: 15vw;
-  height: 20vw;
-  content: "";
-  z-index: 1000;
-}

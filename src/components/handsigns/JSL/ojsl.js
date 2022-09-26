@@ -5,7 +5,7 @@ import {
   GestureDescription,
 } from "fingerpose";
 
-export const oSign = new GestureDescription("o");
+const oSign = new GestureDescription("O");
 // [
 //     [
 //       "Thumb",
@@ -53,3 +53,5 @@ oSign.addDirection(Finger.Ring, FingerDirection.DiagonalUpRight, 0.7);
 //Pinky
 oSign.addCurl(Finger.Pinky, FingerCurl.FullCurl, 1);
 oSign.addDirection(Finger.Pinky, FingerDirection.DiagonalUpRight, 0.7);
+
+export default oSign;

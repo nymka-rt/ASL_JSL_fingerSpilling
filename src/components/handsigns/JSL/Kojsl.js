@@ -5,7 +5,7 @@ import {
   GestureDescription,
 } from "fingerpose";
 
-export const KoSign = new GestureDescription("Ko");
+const KoSign = new GestureDescription("Ko");
 // [
 //     [
 //       "Thumb",
@@ -53,3 +53,5 @@ KoSign.addDirection(Finger.Ring, FingerDirection.DiagonalUpRight, 0.7);
 //Pinky
 KoSign.addCurl(Finger.Pinky, FingerCurl.HalfCurl, 1);
 KoSign.addDirection(Finger.Pinky, FingerDirection.DiagonalUpRight, 0.7);
+
+export default KoSign;

@@ -5,7 +5,7 @@ import {
   GestureDescription,
 } from "fingerpose";
 
-export const KaSign = new GestureDescription("か");
+const KaSign = new GestureDescription("か");
 // [
 //     [
 //       "Thumb",
@@ -53,3 +53,5 @@ KaSign.addDirection(Finger.Ring, FingerDirection.VerticalUp, 0.7);
 //Pinky
 KaSign.addCurl(Finger.Pinky, FingerCurl.FullCurl, 1);
 KaSign.addDirection(Finger.Pinky, FingerDirection.VerticalUp, 0.7);
+
+export default KaSign;

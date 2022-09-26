@@ -40,7 +40,7 @@ z2Sign.addDirection(Finger.Index, FingerDirection.HorizontalLeft, 0.7);
 
 //Index
 z2Sign.addCurl(Finger.Index, FingerCurl.NoCurl, 1);
-z2Sign.addDirection(Finger.Index, FingerDirection.DiagonalUpLeft, 0.7);
+z2Sign.addDirection(Finger.Index, FingerDirection.DiagonalUpLeft, 1);
 
 //Middle
 z2Sign.addCurl(Finger.Middle, FingerCurl.FullCurl, 1);

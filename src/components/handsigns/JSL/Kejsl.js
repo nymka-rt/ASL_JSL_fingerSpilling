@@ -5,7 +5,7 @@ import {
   GestureDescription,
 } from "fingerpose";
 
-export const KeSign = new GestureDescription("Ke");
+const KeSign = new GestureDescription("Ke");
 // [
 //     [
 //       "Thumb",
@@ -37,7 +37,6 @@ export const KeSign = new GestureDescription("Ke");
 //Thumb
 KeSign.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 1.0);
 KeSign.addDirection(Finger.Index, FingerDirection.DiagonalUpLeft, 0.7);
-KeSign.addDirection(Finger.Index, FingerDirection.DiagonalUpRight, 0.7);
 
 //Index
 KeSign.addCurl(Finger.Index, FingerCurl.NoCurl, 1);
@@ -54,3 +53,5 @@ KeSign.addDirection(Finger.Ring, FingerDirection.VerticalUp, 0.7);
 //Pinky
 KeSign.addCurl(Finger.Pinky, FingerCurl.NoCurl, 1);
 KeSign.addDirection(Finger.Pinky, FingerDirection.VerticalUp, 0.7);
+
+export default KeSign;

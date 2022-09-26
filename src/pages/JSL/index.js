@@ -91,12 +91,50 @@ export default function Home() {
         //loading the fingerpose model
         const GE = new fp.GestureEstimator([
           fp.Gestures.ThumbsUpGesture,
-          Handsigns.ASign,
-          Handsigns.ISign,
-          Handsigns.Z11Sign,
-          Handsigns.Z22Sign,
-          Handsigns.Z33Sign,
-          Handsigns.Z44Sign,
+
+          Handsigns.AJSL,
+          Handsigns.IJSL,
+          Handsigns.UJSL,
+          Handsigns.EJSL,
+          Handsigns.OJSL,
+          Handsigns.KaJSL,
+          Handsigns.KiJSL,
+          Handsigns.KuJSL,
+          Handsigns.KeJSL,
+          Handsigns.KoJSL,
+          Handsigns.TaJSL,
+          Handsigns.ChiJSL,
+          Handsigns.TeJSL,
+          Handsigns.TuJSL,
+          Handsigns.ToJSL,
+          Handsigns.SaJSL,
+          Handsigns.ShiJSL,
+          Handsigns.SuJSL,
+          Handsigns.SeJSL,
+          Handsigns.SoJSL,
+          Handsigns.NaJSL,
+          Handsigns.NiJSL,
+          Handsigns.NuJSL,
+          Handsigns.NeJSL,
+          Handsigns.No2JSL,
+          Handsigns.HaJSL,
+          Handsigns.HiJSL,
+          Handsigns.FuJSL,
+          Handsigns.HeJSL,
+          Handsigns.HoJSL,
+          Handsigns.MaJSL,
+          Handsigns.MiJSL,
+          Handsigns.MuJSL,
+          Handsigns.MeJSL,
+          Handsigns.Mo1JSL,
+          Handsigns.YaJSL,
+          Handsigns.YuJSL,
+          Handsigns.YoJSL,
+          Handsigns.RaJSL,
+          Handsigns.RuJSL,
+          Handsigns.ReJSL,
+          Handsigns.RoJSL,
+          Handsigns.WaJSL,
         ]);
 
         const estimatedGestures = await GE.estimate(hand[0].landmarks, 6.5);
@@ -152,7 +190,7 @@ export default function Home() {
                 .setAttribute("src", signList[currentSign].src);
               signLengthLimit++;
               console.log(estimatedGestures.gestures[maxConfidence].name);
-
+              console.log(signList[currentSign].alt.length);
               if (signList[currentSign].alt.length > 2) {
                 console.log(signList[currentSign].alt);
                 console.log(`"----t-----"${t}`);

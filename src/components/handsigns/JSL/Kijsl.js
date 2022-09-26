@@ -5,7 +5,7 @@ import {
   GestureDescription,
 } from "fingerpose";
 
-export const KiSign = new GestureDescription("Ki");
+const KiSign = new GestureDescription("Ki");
 // [
 //     [
 //       "Thumb",
@@ -35,8 +35,8 @@ export const KiSign = new GestureDescription("Ki");
 //   ]
 
 //Thumb
-KiSign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1.0);
-KiSign.addDirection(Finger.Index, FingerDirection.DiagonalUpRight, 0.7);
+KiSign.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 1.0);
+KiSign.addDirection(Finger.Index, FingerDirection.DiagonalUpLeft, 0.7);
 
 //Index
 KiSign.addCurl(Finger.Index, FingerCurl.NoCurl, 1);
@@ -53,3 +53,5 @@ KiSign.addDirection(Finger.Ring, FingerDirection.VerticalUp, 0.7);
 //Pinky
 KiSign.addCurl(Finger.Pinky, FingerCurl.NoCurl, 1);
 KiSign.addDirection(Finger.Pinky, FingerDirection.DiagonalUpLeft, 0.7);
+
+export default KiSign;

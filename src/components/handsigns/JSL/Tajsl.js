@@ -5,7 +5,7 @@ import {
   GestureDescription,
 } from "fingerpose";
 
-export const TaSign = new GestureDescription("Ta");
+const TaSign = new GestureDescription("Ta");
 // [
 //     [
 //       "Thumb",
@@ -53,3 +53,5 @@ TaSign.addDirection(Finger.Ring, FingerDirection.Horizontal, 0.9);
 //Pinky
 TaSign.addCurl(Finger.Pinky, FingerCurl.FullCurl, 1);
 TaSign.addDirection(Finger.Pinky, FingerDirection.Horizontal, 0.9);
+
+export default TaSign;

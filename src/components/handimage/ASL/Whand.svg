@@ -11,7 +11,7 @@
 <defs>
 <radialGradient id="paint0_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(17.197 71.8929) rotate(89.2299) scale(45.0934 18.0412)">
 <stop stop-color="#FFD458" stop-opacity="0.78"/>
-<stop offset="1" stop-color="#F9BF2E"/>
+<stop offset="1" stop-color="#52ded0"/>
 </radialGradient>
 </defs>
 </svg>

@@ -35,7 +35,7 @@ export default function Home() {
   let signLengthLimit = 0;
   let signLength = 0;
   let t = 0;
-
+  const ASLhandsigns = [];
   // let net;
 
   async function runHandpose() {
@@ -92,6 +92,9 @@ export default function Home() {
         //loading the fingerpose model
         const GE = new fp.GestureEstimator([
           fp.Gestures.ThumbsUpGesture,
+          // Handsigns.array.forEach((element) => {
+          //   element;
+          // }),
           Handsigns.aSign,
           Handsigns.bSign,
           Handsigns.cSign,
@@ -118,9 +121,9 @@ export default function Home() {
           Handsigns.xSign,
           Handsigns.ySign,
           Handsigns.z1Sign,
-          Handsigns.z2Sign,
-          Handsigns.z3Sign,
           Handsigns.z4Sign,
+          Handsigns.z3Sign,
+          Handsigns.z2Sign,
         ]);
 
         const estimatedGestures = await GE.estimate(hand[0].landmarks, 6.5);

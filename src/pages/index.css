@@ -32,7 +32,6 @@ img {
   overflow: hidden;
   position: fixed;
   top: 0;
-  z-index: ;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -46,7 +45,7 @@ img {
   object-fit: cover;
   transform: scaleX(-1);
   filter: FlipH;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 #gesture-canvas {
@@ -63,6 +62,7 @@ img {
 
 .pose-data {
   font-size: 10px;
+  background: #88b2f1a9;
 }
 
 #webcam-container {
@@ -76,15 +76,17 @@ img {
 }
 
 #app-title {
-  /* position: absolute; */
-  /* top:0;
-  left:0;
+  position: absolute;
+  top: 0;
+  left: 0;
   right: 0;
-  bottom: 0; */
+  bottom: 0;
   z-index: 5;
 }
 
 .tutor-text {
+  position: absolute;
+  top: 0;
   z-index: 5;
 }
 
@@ -105,14 +107,14 @@ img {
 }
 
 #emojimage {
-  /* position: fixed; */
+  position: fixed;
   top: 60px;
   left: calc(50% - 50px);
   border-style: none;
 }
 
 #emojimage.play {
-  /* position: fixed; */
+  position: fixed;
   z-index: 10;
 }
 
