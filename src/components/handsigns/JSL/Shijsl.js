@@ -36,7 +36,7 @@ const ShiSign = new GestureDescription("Shi");
 
 //Thumb
 ShiSign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1.0);
-ShiSign.addDirection(Finger.Index, FingerDirection.DiagonalUpRight, 0.7);
+ShiSign.addDirection(Finger.Index, FingerDirection.DiagonalUpRight, 0.9);
 
 //Index
 ShiSign.addCurl(Finger.Index, FingerCurl.NoCurl, 1);

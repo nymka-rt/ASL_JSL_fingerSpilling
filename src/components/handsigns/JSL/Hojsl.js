@@ -5,7 +5,7 @@ import {
   GestureDescription,
 } from "fingerpose";
 
-const TeSign = new GestureDescription("Te");
+const HoSign = new GestureDescription("Ho");
 // [
 //     [
 //       "Thumb",
@@ -35,23 +35,23 @@ const TeSign = new GestureDescription("Te");
 //   ]
 
 //Thumb
-TeSign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1.0);
-TeSign.addDirection(Finger.Index, FingerDirection.DiagonalUpLeft, 0.7);
+HoSign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1);
+HoSign.addDirection(Finger.Index, FingerDirection.DiagonalUpLeft, 1);
 
 //Index
-TeSign.addCurl(Finger.Index, FingerCurl.NoCurl, 1);
-TeSign.addDirection(Finger.Index, FingerDirection.VerticalUp, 0.7);
+HoSign.addCurl(Finger.Index, FingerCurl.NoCurl, 1);
+HoSign.addDirection(Finger.Index, FingerDirection.VerticalUp, 0.7);
 
 //Middle
-TeSign.addCurl(Finger.Middle, FingerCurl.NoCurl, 1);
-TeSign.addDirection(Finger.Middle, FingerDirection.VerticalUp, 0.7);
+HoSign.addCurl(Finger.Middle, FingerCurl.NoCurl, 1);
+HoSign.addDirection(Finger.Middle, FingerDirection.VerticalUp, 0.8);
 
 //Ring
-TeSign.addCurl(Finger.Ring, FingerCurl.NoCurl, 1);
-TeSign.addDirection(Finger.Ring, FingerDirection.VerticalUp, 0.7);
+HoSign.addCurl(Finger.Ring, FingerCurl.NoCurl, 1);
+HoSign.addDirection(Finger.Ring, FingerDirection.VerticalUp, 0.8);
 
 //Pinky
-TeSign.addCurl(Finger.Pinky, FingerCurl.NoCurl, 1);
-TeSign.addDirection(Finger.Pinky, FingerDirection.VerticalUp, 0.7);
+HoSign.addCurl(Finger.Pinky, FingerCurl.NoCurl, 1);
+HoSign.addDirection(Finger.Pinky, FingerDirection.VerticalUp, 0.8);
 
-export default TeSign;
+export default HoSign;

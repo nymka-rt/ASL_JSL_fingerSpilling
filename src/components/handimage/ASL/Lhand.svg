@@ -9,7 +9,7 @@
 <path d="M22.5586 76.293H35V81H16.6992V52.5625H22.5586V76.293Z" fill="url(#paint0_diamond)"/>
 <defs>
 <radialGradient id="paint0_diamond" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24.2424 69.8929) rotate(88.0754) scale(45.1147 45.0815)">
-<stop stop-color="#FFD458" stop-opacity="0.78"/>
+<stop stop-color="#52ded0" stop-opacity="0.78"/>
 <stop offset="1" stop-color="#52ded0"/>
 </radialGradient>
 </defs>

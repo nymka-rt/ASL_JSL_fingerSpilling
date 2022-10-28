@@ -185,7 +185,7 @@ export const Signpass = [
   },
   {
     src: Me_sign,
-    alt: ["Me"],
+    alt: "Me",
   },
   {
     src: Mo_sign,

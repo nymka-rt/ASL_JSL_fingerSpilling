@@ -46,7 +46,7 @@ export default function Home() {
 
     setInterval(() => {
       detect(net);
-    }, 150);
+    }, 100);
   }
   function _signList() {
     signList = generateSigns();
@@ -104,16 +104,16 @@ export default function Home() {
           Handsigns.KoJSL,
           Handsigns.TaJSL,
           Handsigns.ChiJSL,
-          Handsigns.TeJSL,
           Handsigns.TuJSL,
+          Handsigns.TeJSL,
           Handsigns.ToJSL,
           Handsigns.SaJSL,
+          Handsigns.NiJSL,
           Handsigns.ShiJSL,
           Handsigns.SuJSL,
           Handsigns.SeJSL,
           Handsigns.SoJSL,
           Handsigns.NaJSL,
-          Handsigns.NiJSL,
           Handsigns.NuJSL,
           Handsigns.NeJSL,
           Handsigns.No2JSL,
@@ -191,8 +191,7 @@ export default function Home() {
               signLengthLimit++;
               console.log(estimatedGestures.gestures[maxConfidence].name);
               console.log(signList[currentSign].alt.length);
-              if (signList[currentSign].alt.length > 2) {
-                console.log(signList[currentSign].alt);
+              if (Array.isArray(signList[currentSign].alt) === true) {
                 console.log(`"----t-----"${t}`);
                 if (
                   signList[currentSign].alt[t] ===
