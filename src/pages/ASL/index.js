@@ -180,6 +180,7 @@ export default function Home() {
                 .setAttribute("src", signList[currentSign].src);
               signLengthLimit++;
               console.log(estimatedGestures.gestures[maxConfidence].name);
+              console.log(estimatedGestures);
               if (signList[currentSign].alt.length > 2) {
                 if (
                   signList[currentSign].alt[t] ===

@@ -5,7 +5,7 @@ import {
   GestureDescription,
 } from "fingerpose";
 
-const KaSign = new GestureDescription("か");
+const KaSign = new GestureDescription("Ka");
 // [
 //     [
 //       "Thumb",

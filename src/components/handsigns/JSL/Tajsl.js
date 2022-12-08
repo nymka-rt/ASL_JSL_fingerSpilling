@@ -36,22 +36,22 @@ const TaSign = new GestureDescription("Ta");
 
 //Thumb
 TaSign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1.0);
-TaSign.addDirection(Finger.Index, FingerDirection.Vertical, 1);
+TaSign.addDirection(Finger.Index, FingerDirection.VerticalUp, 1);
 
 //Index
 TaSign.addCurl(Finger.Index, FingerCurl.FullCurl, 1);
-TaSign.addDirection(Finger.Index, FingerDirection.Horizontal, 0.9);
+TaSign.addDirection(Finger.Index, FingerDirection.HorizontalRight, 0.9);
 
 //Middle
 TaSign.addCurl(Finger.Middle, FingerCurl.FullCurl, 1);
-TaSign.addDirection(Finger.Middle, FingerDirection.Horizontal, 0.9);
+TaSign.addDirection(Finger.Middle, FingerDirection.HorizontalRight, 0.9);
 
 //Ring
 TaSign.addCurl(Finger.Ring, FingerCurl.FullCurl, 1);
-TaSign.addDirection(Finger.Ring, FingerDirection.Horizontal, 0.9);
+TaSign.addDirection(Finger.Ring, FingerDirection.HorizontalRight, 0.9);
 
 //Pinky
 TaSign.addCurl(Finger.Pinky, FingerCurl.FullCurl, 1);
-TaSign.addDirection(Finger.Pinky, FingerDirection.Horizontal, 0.9);
+TaSign.addDirection(Finger.Pinky, FingerDirection.HorizontalRight, 0.9);
 
 export default TaSign;
