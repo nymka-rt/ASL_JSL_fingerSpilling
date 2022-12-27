@@ -35,7 +35,7 @@ const TuSign = new GestureDescription("Tu");
 //   ]
 
 //Thumb
-TuSign.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 1.0);
+TuSign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1.0);
 TuSign.addDirection(Finger.Index, FingerDirection.VerticalUp, 0.7);
 
 //Index
@@ -44,7 +44,7 @@ TuSign.addDirection(Finger.Index, FingerDirection.VerticalUp, 0.7);
 
 //Middle
 TuSign.addCurl(Finger.Middle, FingerCurl.FullCurl, 1);
-TuSign.addDirection(Finger.Middle, FingerDirection.VerticalUp, 0.7);
+TuSign.addDirection(Finger.Middle, FingerDirection.VerticalUp, 0.8);
 
 //Ring
 TuSign.addCurl(Finger.Ring, FingerCurl.NoCurl, 1);
@@ -52,6 +52,6 @@ TuSign.addDirection(Finger.Ring, FingerDirection.VerticalUp, 0.7);
 
 //Pinky
 TuSign.addCurl(Finger.Pinky, FingerCurl.NoCurl, 1);
-TuSign.addDirection(Finger.Pinky, FingerDirection.VerticalUp, 0.7);
+TuSign.addDirection(Finger.Pinky, FingerDirection.VerticalUp, 0.8);
 
 export default TuSign;

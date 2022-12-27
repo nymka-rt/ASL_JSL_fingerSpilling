@@ -188,7 +188,6 @@ export default function Home() {
                 ) {
                   t++;
                   signLength++;
-                  console.log(`"sdaaaaaa"${t}`);
                 }
 
                 console.log(`SignLenght==>${signLength}`);

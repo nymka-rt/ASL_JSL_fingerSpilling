@@ -35,6 +35,7 @@ export default function Home() {
   let signLength = 0;
   let t = 0;
   let gamestate = "started";
+  let second = 0;
 
   // let net;
 
@@ -46,7 +47,7 @@ export default function Home() {
 
     setInterval(() => {
       detect(net);
-    }, 100);
+    }, 50);
   }
   function _signList() {
     signList = generateSigns();
@@ -61,7 +62,8 @@ export default function Home() {
   }
 
   function generateSigns() {
-    const password = shuffle(Signpass);
+    // const password = shuffle(Signpass);
+    const password = Signpass;
     return password;
   }
 
@@ -86,12 +88,11 @@ export default function Home() {
 
       // Make Detections
       const hand = await net.estimateHands(video);
-
+      second += 0.05;
       if (hand.length > 0) {
         //loading the fingerpose model
         const GE = new fp.GestureEstimator([
           fp.Gestures.ThumbsUpGesture,
-
           Handsigns.AJSL,
           Handsigns.IJSL,
           Handsigns.UJSL,
@@ -172,7 +173,6 @@ export default function Home() {
               "make a hand gesture based on letter shown below";
           } else if (gamestate === "played") {
             document.querySelector("#app-title").innerText = "";
-
             //looping the sign list
             if (currentSign === signList.length) {
               _signList();
@@ -180,7 +180,6 @@ export default function Home() {
               return;
             }
             //game play state
-
             if (
               typeof signList[currentSign].src === "string" ||
               signList[currentSign].src instanceof String
@@ -189,19 +188,18 @@ export default function Home() {
                 .getElementById("emojimage")
                 .setAttribute("src", signList[currentSign].src);
               signLengthLimit++;
-              console.log(estimatedGestures.gestures[maxConfidence].name);
-              console.log(signList[currentSign].alt.length);
+              // console.log(signList[currentSign].alt.length);
+              // console.log(signList[currentSign].alt);
+
+              //checking array object for recegnation motion
               if (Array.isArray(signList[currentSign].alt) === true) {
-                console.log(`"----t-----"${t}`);
                 if (
                   signList[currentSign].alt[t] ===
                   estimatedGestures.gestures[maxConfidence].name
                 ) {
                   t++;
                   signLength++;
-                  console.log(`"sdaaaaaa"${t}`);
                 }
-
                 console.log(`SignLenght==>${signLength}`);
                 console.log(`SignLenghtLImit==>${signLengthLimit}`);
                 if (signLengthLimit >= 100) {
@@ -213,12 +211,20 @@ export default function Home() {
                   signLengthLimit = 0;
                   t = 0;
                   signLength = 0;
+                  console.log(
+                    `${estimatedGestures.gestures[maxConfidence].name}:${second}`
+                  );
+                  second = 0;
                   currentSign++;
                 }
               } else if (
                 signList[currentSign].alt ===
                 estimatedGestures.gestures[maxConfidence].name
               ) {
+                console.log(
+                  `${estimatedGestures.gestures[maxConfidence].name}:${second}`
+                );
+                second = 0;
                 currentSign++;
               }
               setSign(estimatedGestures.gestures[maxConfidence].name);
