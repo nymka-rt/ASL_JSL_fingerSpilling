@@ -200,8 +200,8 @@ export default function Home() {
                   t++;
                   signLength++;
                 }
-                console.log(`SignLenght==>${signLength}`);
-                console.log(`SignLenghtLImit==>${signLengthLimit}`);
+                // console.log(`SignLenght==>${signLength}`);
+                // console.log(`SignLenghtLImit==>${signLengthLimit}`);
                 if (signLengthLimit >= 100) {
                   signLengthLimit = 0;
                   t = 0;

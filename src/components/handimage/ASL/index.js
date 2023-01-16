@@ -187,3 +187,109 @@ export const Signpass = [
     alt: ["Z1", "Z2", "Z3", "Z4"],
   },
 ];
+export const SignAZ = [
+  {
+    src: A_sign,
+    alt: "A",
+  },
+  {
+    src: B_sign,
+    alt: "B",
+  },
+  {
+    src: C_sign,
+    alt: "C",
+  },
+  {
+    src: D_sign,
+    alt: "D",
+  },
+  {
+    src: E_sign,
+    alt: "E",
+  },
+  {
+    src: F_sign,
+    alt: "F",
+  },
+  {
+    src: G_sign,
+    alt: "G",
+  },
+  {
+    src: H_sign,
+    alt: "H",
+  },
+  {
+    src: I_sign,
+    alt: "I",
+  },
+  {
+    src: J_sign,
+    alt: "J",
+  },
+  {
+    src: K_sign,
+    alt: "K",
+  },
+  {
+    src: L_sign,
+    alt: "L",
+  },
+  {
+    src: M_sign,
+    alt: "M",
+  },
+  {
+    src: N_sign,
+    alt: "N",
+  },
+  {
+    src: O_sign,
+    alt: "O",
+  },
+  {
+    src: P_sign,
+    alt: "P",
+  },
+  {
+    src: Q_sign,
+    alt: "Q",
+  },
+  {
+    src: R_sign,
+    alt: "R",
+  },
+  {
+    src: S_sign,
+    alt: "S",
+  },
+  {
+    src: T_sign,
+    alt: "T",
+  },
+  {
+    src: U_sign,
+    alt: "U",
+  },
+  {
+    src: V_sign,
+    alt: "V",
+  },
+  {
+    src: W_sign,
+    alt: "W",
+  },
+  {
+    src: X_sign,
+    alt: "X",
+  },
+  {
+    src: Y_sign,
+    alt: "Y",
+  },
+  {
+    src: Z_sign,
+    alt: ["Z1", "Z2", "Z3", "Z4"],
+  },
+];

@@ -15,23 +15,23 @@ const naSign = new GestureDescription("Na");
 //   ];
 
 //Thumb
-naSign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1.0);
-naSign.addDirection(Finger.Index, FingerDirection.VerticalDown, 0.7);
+naSign.addCurl(Finger.Thumb, FingerCurl.NoçCurl, 1.0);
+naSign.addDirection(Finger.Index, FingerDirection.VerticalDown, 0.8);
 
 //Index
 naSign.addCurl(Finger.Index, FingerCurl.NofCurl, 1);
-naSign.addDirection(Finger.Index, FingerDirection.VerticalDown, 0.7);
+naSign.addDirection(Finger.Index, FingerDirection.VerticalDown, 0.8);
 
 //Middle
 naSign.addCurl(Finger.Middle, FingerCurl.NoCurl, 1);
-naSign.addDirection(Finger.Middle, FingerDirection.VerticalDown, 0.7);
+naSign.addDirection(Finger.Middle, FingerDirection.VerticalDown, 0.8);
 
 //Ring
 naSign.addCurl(Finger.Ring, FingerCurl.HalfCurl, 1);
-naSign.addDirection(Finger.Ring, FingerDirection.VerticalDown, 0.7);
+naSign.addDirection(Finger.Ring, FingerDirection.VerticalDown, 0.8);
 
 //Pinky
 naSign.addCurl(Finger.Pinky, FingerCurl.FullCurl, 1);
-naSign.addDirection(Finger.Pinky, FingerDirection.VerticalDown, 0.7);
+naSign.addDirection(Finger.Pinky, FingerDirection.VerticalDown, 0.8);
 
 export default naSign;

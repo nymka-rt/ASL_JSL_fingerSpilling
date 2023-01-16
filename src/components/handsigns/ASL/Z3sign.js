@@ -35,7 +35,7 @@ export const z3Sign = new GestureDescription("Z3");
 //   ]
 
 //Thumb
-z3Sign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 0.8);
+z3Sign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1);
 z3Sign.addDirection(Finger.Index, FingerDirection.HorizontalRight, 0.7);
 
 //Index
@@ -44,7 +44,7 @@ z3Sign.addDirection(Finger.Index, FingerDirection.HorizontalRight, 0.7);
 
 //Middle
 z3Sign.addCurl(Finger.Middle, FingerCurl.FullCurl, 1);
-z3Sign.addDirection(Finger.Middle, FingerDirection.HorizontalRight, 0.7);
+z3Sign.addDirection(Finger.Middle, FingerDirection.HorizontalRight, 0.9);
 
 //Ring
 z3Sign.addCurl(Finger.Ring, FingerCurl.FullCurl, 1);

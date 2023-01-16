@@ -19,7 +19,7 @@ import {
   ChakraProvider,
 } from "@chakra-ui/react";
 
-import { Signimage, Signpass } from "../../components/handimage/ASL";
+import { Signimage, Signpass, SignAZ } from "../../components/handimage/ASL";
 
 export default function Home() {
   const webcamRef = useRef(null);
@@ -35,9 +35,11 @@ export default function Home() {
   let signLengthLimit = 0;
   let signLength = 0;
   let t = 0;
+  let second = 0;
+  let [testingMode, settestingMode] = useState(false);
+  let toggleBool = () => settestingMode(!testingMode);
   const ASLhandsigns = [];
   // let net;
-
   async function runHandpose() {
     const net = await handpose.load();
     _signList();
@@ -46,10 +48,14 @@ export default function Home() {
 
     setInterval(() => {
       detect(net);
-    }, 150);
+    }, 50);
   }
   function _signList() {
-    signList = generateSigns();
+    if (testingMode === false) {
+      signList = generateSigns();
+    } else {
+      signList = generateAZ();
+    }
   }
 
   function shuffle(a) {
@@ -61,7 +67,13 @@ export default function Home() {
   }
 
   function generateSigns() {
-    const password = shuffle(Signpass);
+    // const password = shuffle(Signpass);
+    const password = Signpass;
+    return password;
+  }
+  function generateAZ() {
+    // const password = shuffle(Signpass);
+    const password = SignAZ;
     return password;
   }
 
@@ -88,6 +100,7 @@ export default function Home() {
       // Make Detections
       const hand = await net.estimateHands(video);
 
+      second += 0.05;
       if (hand.length > 0) {
         //loading the fingerpose model
         const GE = new fp.GestureEstimator([
@@ -179,8 +192,9 @@ export default function Home() {
                 .getElementById("emojimage")
                 .setAttribute("src", signList[currentSign].src);
               signLengthLimit++;
-              console.log(estimatedGestures.gestures[maxConfidence].name);
-              console.log(estimatedGestures);
+
+              // console.log(estimatedGestures.gestures[maxConfidence].name);
+              // console.log(estimatedGestures);
               if (signList[currentSign].alt.length > 2) {
                 if (
                   signList[currentSign].alt[t] ===
@@ -190,8 +204,9 @@ export default function Home() {
                   signLength++;
                 }
 
-                console.log(`SignLenght==>${signLength}`);
-                console.log(`SignLenghtLImit==>${signLengthLimit}`);
+                // console.log(`SignLenght==>${signLength}`);
+                // console.log(`SignLenghtLImit==>${signLengthLimit}`);
+
                 if (signLengthLimit >= 100) {
                   signLengthLimit = 0;
                   signLength = 0;
@@ -202,11 +217,19 @@ export default function Home() {
                   signLengthLimit = 0;
                   signLength = 0;
                   t = 0;
+                  console.log(
+                    `${estimatedGestures.gestures[maxConfidence].name}:${second}`
+                  );
+                  second = 0;
                 }
               } else if (
                 signList[currentSign].alt ===
                 estimatedGestures.gestures[maxConfidence].name
               ) {
+                console.log(
+                  `${estimatedGestures.gestures[maxConfidence].name}:${second}`
+                );
+                second = 0;
                 currentSign++;
               }
               setSign(estimatedGestures.gestures[maxConfidence].name);
@@ -237,7 +260,16 @@ export default function Home() {
       setCamState("on");
     }
   }
+  function runningMode() {
+    if (testingMode === false) {
+      console.log("--button--");
 
+      testingMode = true;
+    } else {
+      testingMode = false;
+      console.log("--reverebutton--");
+    }
+  }
   return (
     <ChakraProvider>
       <Box bgColor="#5784BA">
@@ -341,6 +373,7 @@ export default function Home() {
               )
             }
             onClick={turnOffCamera}
+            // onClick={toggleBool}
             colorScheme="orange"
           >
             Camera

@@ -35,12 +35,12 @@ export const z2Sign = new GestureDescription("Z2");
 //   ]
 
 //Thumb
-z2Sign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 0.8);
+z2Sign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1);
 z2Sign.addDirection(Finger.Index, FingerDirection.HorizontalLeft, 0.7);
 
 //Index
 z2Sign.addCurl(Finger.Index, FingerCurl.NoCurl, 1);
-z2Sign.addDirection(Finger.Index, FingerDirection.DiagonalUpLeft, 1);
+z2Sign.addDirection(Finger.Index, FingerDirection.DiagonalUpLeft, 0.9);
 
 //Middle
 z2Sign.addCurl(Finger.Middle, FingerCurl.FullCurl, 1);

@@ -35,7 +35,7 @@ export const z4Sign = new GestureDescription("Z4");
 //   ]
 
 //Thumb
-z4Sign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 0.8);
+z4Sign.addCurl(Finger.Thumb, FingerCurl.NoCurl, 1);
 z4Sign.addDirection(Finger.Index, FingerDirection.HorizontalLeft, 0.7);
 
 //Index

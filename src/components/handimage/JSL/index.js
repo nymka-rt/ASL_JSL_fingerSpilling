@@ -51,188 +51,188 @@ export const Signimage = {
 };
 
 export const Signpass = [
-  {
-    src: A_sign,
-    alt: "A",
-  },
-  {
-    src: I_sign,
-    alt: "I",
-  },
-  {
-    src: U_sign,
-    alt: "U",
-  },
-  {
-    src: E_sign,
-    alt: "E",
-  },
-  {
-    src: O_sign,
-    alt: "O",
-  },
-  {
-    src: Ka_sign,
-    alt: "Ka",
-  },
-  {
-    src: Ki_sign,
-    alt: "Ki",
-  },
-  {
-    src: Ku_sign,
-    alt: "Ku",
-  },
-  {
-    src: Ke_sign,
-    alt: "Ke",
-  },
-  {
-    src: Ko_sign,
-    alt: "Ko",
-  },
-  {
-    src: Sa_sign,
-    alt: "Sa",
-  },
-  {
-    src: Shi_sign,
-    alt: "Shi",
-  },
-  {
-    src: Su_sign,
-    alt: "Su",
-  },
-  {
-    src: Se_sign,
-    alt: "Se",
-  },
-  {
-    src: So_sign,
-    alt: "So",
-  },
-  {
-    src: Ta_sign,
-    alt: "Ta",
-  },
-  {
-    src: Chi_sign,
-    alt: "Chi",
-  },
+  // {
+  //   src: A_sign,
+  //   alt: "A",
+  // },
+  // {
+  //   src: I_sign,
+  //   alt: "I",
+  // },
+  // {
+  //   src: U_sign,
+  //   alt: "U",
+  // },
+  // {
+  //   src: E_sign,
+  //   alt: "E",
+  // },
+  // {
+  //   src: O_sign,
+  //   alt: "O",
+  // },
+  // {
+  //   src: Ka_sign,
+  //   alt: "Ka",
+  // },
+  // {
+  //   src: Ki_sign,
+  //   alt: "Ki",
+  // },
+  // {
+  //   src: Ku_sign,
+  //   alt: "Ku",
+  // },
+  // {
+  //   src: Ke_sign,
+  //   alt: "Ke",
+  // },
+  // {
+  //   src: Ko_sign,
+  //   alt: "Ko",
+  // },
+  // {
+  //   src: Sa_sign,
+  //   alt: "Sa",
+  // },
+  // {
+  //   src: Shi_sign,
+  //   alt: "Shi",
+  // },
+  // {
+  //   src: Su_sign,
+  //   alt: "Su",
+  // },
+  // {
+  //   src: Se_sign,
+  //   alt: "Se",
+  // },
+  // {
+  //   src: So_sign,
+  //   alt: "So",
+  // },
+  // {
+  //   src: Ta_sign,
+  //   alt: "Ta",
+  // },
+  // {
+  //   src: Chi_sign,
+  //   alt: "Chi",
+  // },
   {
     src: Tu_sign,
     alt: "Tu",
   },
-  {
-    src: Te_sign,
-    alt: "Te",
-  },
-  {
-    src: To_sign,
-    alt: "To",
-  },
+  // {
+  //   src: Te_sign,
+  //   alt: "Te",
+  // },
+  // {
+  //   src: To_sign,
+  //   alt: "To",
+  // },
   {
     src: Na_sign,
     alt: "Na",
   },
-  {
-    src: Ni_sign,
-    alt: "Ni",
-  },
-  {
-    src: Nu_sign,
-    alt: "Nu",
-  },
-  {
-    src: Ne_sign,
-    alt: "Ne",
-  },
-  {
-    src: No_sign,
-    alt: "Hi",
-  },
-  {
-    src: Ha_sign,
-    alt: "Ha",
-  },
-  {
-    src: Hi_sign,
-    alt: "Hi",
-  },
-  {
-    src: Fu_sign,
-    alt: "Fu",
-  },
-  {
-    src: He_sign,
-    alt: "He",
-  },
-  {
-    src: Ho_sign,
-    alt: "Ho",
-  },
-  {
-    src: Ma_sign,
-    alt: "Ma",
-  },
+  // {
+  //   src: Ni_sign,
+  //   alt: "Ni",
+  // },
+  // {
+  //   src: Nu_sign,
+  //   alt: "Nu",
+  // },
+  // {
+  //   src: Ne_sign,
+  //   alt: "Ne",
+  // },
+  // {
+  //   src: No_sign,
+  //   alt: ["Hi", "No2"],
+  // },
+  // {
+  //   src: Ha_sign,
+  //   alt: "Ha",
+  // },
+  // {
+  //   src: Hi_sign,
+  //   alt: "Hi",
+  // },
+  // {
+  //   src: Fu_sign,
+  //   alt: "Fu",
+  // },
+  // {
+  //   src: He_sign,
+  //   alt: "He",
+  // },
+  // {
+  //   src: Ho_sign,
+  //   alt: "Ho",
+  // },
+  // {
+  //   src: Ma_sign,
+  //   alt: "Ma",
+  // },
   {
     src: Mi_sign,
     alt: "Mi",
   },
-  {
-    src: Mu_sign,
-    alt: "Mu",
-  },
-  {
-    src: Me_sign,
-    alt: "Me",
-  },
-  {
-    src: Mo_sign,
-    alt: ["Mo1", "Nu"],
-  },
-  {
-    src: Ya_sign,
-    alt: "Ya",
-  },
-  {
-    src: Yu_sign,
-    alt: "Yu",
-  },
-  {
-    src: Yo_sign,
-    alt: "Yo",
-  },
-  {
-    src: Ra_sign,
-    alt: "Ra",
-  },
-  {
-    src: Ri_sign,
-    alt: ["U", "Ni"],
-  },
-  {
-    src: Ru_sign,
-    alt: "Ru",
-  },
-  {
-    src: Re_sign,
-    alt: "Re",
-  },
-  {
-    src: Ro_sign,
-    alt: "Ro",
-  },
-  {
-    src: Wa_sign,
-    alt: "Wa",
-  },
-  {
-    src: Wo_sign,
-    alt: "O",
-  },
-  {
-    src: N_sign,
-    alt: ["No2", "So"],
-  },
+  // {
+  //   src: Mu_sign,
+  //   alt: "Mu",
+  // },
+  // {
+  //   src: Me_sign,
+  //   alt: "Me",
+  // },
+  // {
+  //   src: Mo_sign,
+  //   alt: ["Mo1", "Nu"],
+  // },
+  // {
+  //   src: Ya_sign,
+  //   alt: "Ya",
+  // },
+  // {
+  //   src: Yu_sign,
+  //   alt: "Yu",
+  // },
+  // {
+  //   src: Yo_sign,
+  //   alt: "Yo",
+  // },
+  // {
+  //   src: Ra_sign,
+  //   alt: "Ra",
+  // },
+  // {
+  //   src: Ri_sign,
+  //   alt: ["U", "Ni"],
+  // },
+  // {
+  //   src: Ru_sign,
+  //   alt: "Ru",
+  // },
+  // {
+  //   src: Re_sign,
+  //   alt: "Re",
+  // },
+  // {
+  //   src: Ro_sign,
+  //   alt: "Ro",
+  // },
+  // {
+  //   src: Wa_sign,
+  //   alt: "Wa",
+  // },
+  // {
+  //   src: Wo_sign,
+  //   alt: ["O", "O"],
+  // },
+  // {
+  //   src: N_sign,
+  //   alt: ["No2", "So"],
+  // },
 ];
