@@ -36,7 +36,7 @@ export default function Home() {
   let signLength = 0;
   let t = 0;
   let second = 0;
-  let [testingMode, settestingMode] = useState(false);
+  let [testingMode, settestingMode] = useState(true);
   let toggleBool = () => settestingMode(!testingMode);
   const ASLhandsigns = [];
   // let net;
