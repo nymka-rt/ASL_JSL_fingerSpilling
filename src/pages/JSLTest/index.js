@@ -5,7 +5,7 @@ import Webcam from "react-webcam";
 import { drawHand } from "../utilities";
 import * as fp from "fingerpose";
 import { RiCameraFill, RiCameraOffFill } from "react-icons/ri";
-import Handsigns from "../../components/handsigns/ASL";
+import Handsigns from "../../components/handsigns/JSL";
 
 import {
   Text,
@@ -19,7 +19,7 @@ import {
   ChakraProvider,
 } from "@chakra-ui/react";
 
-import { Signimage, Signpass, SignAZ } from "../../components/handimage/ASL";
+import { Signimage, Signpass, SignAN } from "../../components/handimage/JSL";
 
 export default function Home() {
   const webcamRef = useRef(null);
@@ -31,14 +31,14 @@ export default function Home() {
 
   let signList = [];
   let currentSign = 0;
-  let gamestate = "started";
   let signLengthLimit = 0;
   let signLength = 0;
   let t = 0;
+  let gamestate = "started";
   let second = 0;
-  let [testingMode] = useState(false);
-  const ASLhandsigns = [];
+  let testingMode = useState(true);
   // let net;
+
   async function runHandpose() {
     const net = await handpose.load();
     _signList();
@@ -50,11 +50,7 @@ export default function Home() {
     }, 50);
   }
   function _signList() {
-    if (testingMode === false) {
-      signList = generateSigns();
-    } else {
-      signList = generateAZ();
-    }
+    signList = generateAN();
   }
 
   function shuffle(a) {
@@ -70,9 +66,9 @@ export default function Home() {
     const password = Signpass;
     return password;
   }
-  function generateAZ() {
+  function generateAN() {
     // const password = shuffle(Signpass);
-    const password = SignAZ;
+    const password = SignAN;
     return password;
   }
 
@@ -87,7 +83,6 @@ export default function Home() {
       const video = webcamRef.current.video;
       const videoWidth = webcamRef.current.video.videoWidth;
       const videoHeight = webcamRef.current.video.videoHeight;
-
       // Set video width
       webcamRef.current.video.width = videoWidth;
       webcamRef.current.video.height = videoHeight;
@@ -98,44 +93,54 @@ export default function Home() {
 
       // Make Detections
       const hand = await net.estimateHands(video);
-
       second += 0.05;
       if (hand.length > 0) {
         //loading the fingerpose model
         const GE = new fp.GestureEstimator([
           fp.Gestures.ThumbsUpGesture,
-          // Handsigns.array.forEach((element) => {
-          //   element;
-          // }),
-          Handsigns.aSign,
-          Handsigns.bSign,
-          Handsigns.cSign,
-          Handsigns.dSign,
-          Handsigns.eSign,
-          Handsigns.fSign,
-          Handsigns.gSign,
-          Handsigns.hSign,
-          Handsigns.iSign,
-          Handsigns.jSign,
-          Handsigns.kSign,
-          Handsigns.lSign,
-          Handsigns.mSign,
-          Handsigns.nSign,
-          Handsigns.oSign,
-          Handsigns.pSign,
-          Handsigns.qSign,
-          Handsigns.rSign,
-          Handsigns.sSign,
-          Handsigns.tSign,
-          Handsigns.uSign,
-          Handsigns.vSign,
-          Handsigns.wSign,
-          Handsigns.xSign,
-          Handsigns.ySign,
-          Handsigns.z1Sign,
-          Handsigns.z4Sign,
-          Handsigns.z3Sign,
-          Handsigns.z2Sign,
+          Handsigns.AJSL,
+          Handsigns.IJSL,
+          Handsigns.UJSL,
+          Handsigns.EJSL,
+          Handsigns.OJSL,
+          Handsigns.KaJSL,
+          Handsigns.KiJSL,
+          Handsigns.KuJSL,
+          Handsigns.KeJSL,
+          Handsigns.KoJSL,
+          Handsigns.TaJSL,
+          Handsigns.ChiJSL,
+          Handsigns.TuJSL,
+          Handsigns.TeJSL,
+          Handsigns.ToJSL,
+          Handsigns.SaJSL,
+          Handsigns.NiJSL,
+          Handsigns.ShiJSL,
+          Handsigns.SuJSL,
+          Handsigns.SeJSL,
+          Handsigns.SoJSL,
+          Handsigns.NaJSL,
+          Handsigns.NuJSL,
+          Handsigns.NeJSL,
+          Handsigns.No2JSL,
+          Handsigns.HaJSL,
+          Handsigns.HiJSL,
+          Handsigns.FuJSL,
+          Handsigns.HeJSL,
+          Handsigns.HoJSL,
+          Handsigns.MaJSL,
+          Handsigns.MiJSL,
+          Handsigns.MuJSL,
+          Handsigns.MeJSL,
+          Handsigns.Mo1JSL,
+          Handsigns.YaJSL,
+          Handsigns.YuJSL,
+          Handsigns.YoJSL,
+          Handsigns.RaJSL,
+          Handsigns.RuJSL,
+          Handsigns.ReJSL,
+          Handsigns.RoJSL,
+          Handsigns.WaJSL,
         ]);
 
         const estimatedGestures = await GE.estimate(hand[0].landmarks, 6.5);
@@ -173,16 +178,13 @@ export default function Home() {
               "make a hand gesture based on letter shown below";
           } else if (gamestate === "played") {
             document.querySelector("#app-title").innerText = "";
-
             //looping the sign list
             if (currentSign === signList.length) {
               _signList();
               currentSign = 0;
               return;
             }
-
             //game play state
-
             if (
               typeof signList[currentSign].src === "string" ||
               signList[currentSign].src instanceof String
@@ -191,10 +193,11 @@ export default function Home() {
                 .getElementById("emojimage")
                 .setAttribute("src", signList[currentSign].src);
               signLengthLimit++;
+              // console.log(signList[currentSign].alt.length);
+              // console.log(signList[currentSign].alt);
 
-              // console.log(estimatedGestures.gestures[maxConfidence].name);
-              // console.log(estimatedGestures);
-              if (signList[currentSign].alt.length > 2) {
+              //checking array object for recegnation motion
+              if (Array.isArray(signList[currentSign].alt) === true) {
                 if (
                   signList[currentSign].alt[t] ===
                   estimatedGestures.gestures[maxConfidence].name
@@ -202,24 +205,22 @@ export default function Home() {
                   t++;
                   signLength++;
                 }
-
                 // console.log(`SignLenght==>${signLength}`);
                 // console.log(`SignLenghtLImit==>${signLengthLimit}`);
-
                 if (signLengthLimit >= 100) {
                   signLengthLimit = 0;
-                  signLength = 0;
                   t = 0;
+                  signLength = 0;
                 }
                 if (signLength === signList[currentSign].alt.length) {
-                  currentSign++;
                   signLengthLimit = 0;
-                  signLength = 0;
                   t = 0;
+                  signLength = 0;
                   console.log(
                     `${estimatedGestures.gestures[maxConfidence].name}:${second}`
                   );
                   second = 0;
+                  currentSign++;
                 }
               } else if (
                 signList[currentSign].alt ===
@@ -259,16 +260,7 @@ export default function Home() {
       setCamState("on");
     }
   }
-  function runningMode() {
-    if (testingMode === false) {
-      console.log("--button--");
 
-      testingMode = true;
-    } else {
-      testingMode = false;
-      console.log("--reverebutton--");
-    }
-  }
   return (
     <ChakraProvider>
       <Box bgColor="#5784BA">
@@ -346,7 +338,6 @@ export default function Home() {
               right: "30px",
             }}
           ></Box>
-
           <Image h="150px" objectFit="cover" id="emojimage" />
           <pre
             className="pose-data"
@@ -372,7 +363,6 @@ export default function Home() {
               )
             }
             onClick={turnOffCamera}
-            // onClick={toggleBool}
             colorScheme="orange"
           >
             Camera

@@ -44,9 +44,10 @@ import Ro_sign from "./Ro_Sign.png";
 import Wa_sign from "./Wa_Sign.png";
 import Wo_sign from "./Wo_Sign.png";
 import N_sign from "./N_Sign.png";
+import Test_sign from "./I.png";
 
 export const Signimage = {
-  A: A_sign,
+  A: Ki_sign,
   I: I_sign,
 };
 
@@ -234,5 +235,15 @@ export const Signpass = [
   {
     src: N_sign,
     alt: ["No2", "So"],
+  },
+];
+export const SignAN = [
+  {
+    src: Test_sign,
+    alt: "A",
+  },
+  {
+    src: "い",
+    alt: "I",
   },
 ];

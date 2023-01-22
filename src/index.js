@@ -2,7 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./pages/index.css";
 import ASL from "./pages/ASL";
+import ASLTest from "./pages/ASLTest";
 import JSL from "./pages/JSL";
+import JSLTest from "./pages/JSLTest";
 import Home from "./pages/home";
 import { ChakraProvider } from "@chakra-ui/react";
 import * as serviceWorker from "./pages/serviceWorker";
@@ -12,26 +14,33 @@ ReactDOM.render(
     <Router>
       <div>
         <ul>
-          <li>
-            <span>
-              <Link to="/">Home</Link>
-            </span>
-          </li>
-          <li>
-            <span>
-              <Link to="/asl">ASl</Link>
-            </span>
-          </li>
-          <li>
-            <span>
-              <Link to="/jsl">JSL</Link>
-            </span>
-          </li>
+          <Link to="/aslPractice">
+            <li>
+              <span>ASL</span>
+            </li>
+          </Link>
+          <Link to="/aslTest">
+            <li>
+              <span>ASLTest</span>
+            </li>
+          </Link>
+          <Link to="/jslPractice">
+            <li>
+              <span>JSLPractice</span>
+            </li>
+          </Link>
+          <Link to="/jslTest">
+            <li>
+              <span>JSLTest</span>
+            </li>
+          </Link>
         </ul>
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/asl" element={<ASL />}></Route>
-          <Route exact path="/jsl" element={<JSL />}></Route>
+          <Route exact path="/aslPractice" element={<ASL />}></Route>
+          <Route exact path="/aslTest" element={<ASLTest />}></Route>
+          <Route exact path="/jslPractice" element={<JSL />}></Route>
+          <Route exact path="/jslTest" element={<JSLTest />}></Route>
         </Routes>
       </div>
     </Router>

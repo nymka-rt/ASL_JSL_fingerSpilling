@@ -19,7 +19,7 @@ import {
   ChakraProvider,
 } from "@chakra-ui/react";
 
-import { Signimage, Signpass, SignAZ } from "../../components/handimage/ASL";
+import { Signimage, SignAZ } from "../../components/handimage/ASL";
 
 export default function Home() {
   const webcamRef = useRef(null);
@@ -36,7 +36,7 @@ export default function Home() {
   let signLength = 0;
   let t = 0;
   let second = 0;
-  let [testingMode] = useState(false);
+  let testingMode = useState(true);
   const ASLhandsigns = [];
   // let net;
   async function runHandpose() {
@@ -50,11 +50,7 @@ export default function Home() {
     }, 50);
   }
   function _signList() {
-    if (testingMode === false) {
-      signList = generateSigns();
-    } else {
-      signList = generateAZ();
-    }
+    signList = generateAZ();
   }
 
   function shuffle(a) {
@@ -65,11 +61,11 @@ export default function Home() {
     return a;
   }
 
-  function generateSigns() {
-    // const password = shuffle(Signpass);
-    const password = Signpass;
-    return password;
-  }
+  //   function generateSigns() {
+  //     // const password = shuffle(Signpass);
+  //     const password = Signpass;
+  //     return password;
+  //   }
   function generateAZ() {
     // const password = shuffle(Signpass);
     const password = SignAZ;
