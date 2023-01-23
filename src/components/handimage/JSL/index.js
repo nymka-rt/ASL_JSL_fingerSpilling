@@ -44,7 +44,52 @@ import Ro_sign from "./Ro_Sign.png";
 import Wa_sign from "./Wa_Sign.png";
 import Wo_sign from "./Wo_Sign.png";
 import N_sign from "./N_Sign.png";
-import Test_sign from "./I.png";
+import hiragana_a from "./hiragana_A.png";
+import hiragana_i from "./hiragana-i.png";
+import hiragana_u from "./hiragana-u.png";
+import hiragana_e from "./hiragana-e.png";
+import hiragana_o from "./hiragana-o.png";
+import hiragana_ka from "./hiragana-ka.png";
+import hiragana_ki from "./hiragana-ki.png";
+import hiragana_ku from "./hiragana-ku.png";
+import hiragana_ke from "./hiragana-ke.png";
+import hiragana_ko from "./hiragana-ko.png";
+import hiragana_sa from "./hiragana-sa.png";
+import hiragana_shi from "./hiragana-shi.png";
+import hiragana_su from "./hiragana-su.png";
+import hiragana_se from "./hiragana-se.png";
+import hiragana_so from "./hiragana-so.png";
+import hiragana_ta from "./hiragana-ta.png";
+import hiragana_chi from "./hiragana-chi.png";
+import hiragana_tsu from "./hiragana-tsu.png";
+import hiragana_te from "./hiragana-te.png";
+import hiragana_to from "./hiragana-to.png";
+import hiragana_na from "./hiragana-na.png";
+import hiragana_ni from "./hiragana-ni.png";
+import hiragana_nu from "./hiragana-nu.png";
+import hiragana_ne from "./hiragana-ne.png";
+import hiragana_no from "./hiragana-no.png";
+import hiragana_ha from "./hiragana-ha.png";
+import hiragana_hi from "./hiragana-hi.png";
+import hiragana_fu from "./hiragana-fu.png";
+import hiragana_he from "./hiragana-he.png";
+import hiragana_ho from "./hiragana-ho.png";
+import hiragana_ma from "./hiragana-ma.png";
+import hiragana_mi from "./hiragana-mi.png";
+import hiragana_mu from "./hiragana-mu.png";
+import hiragana_me from "./hiragana-me.png";
+import hiragana_mo from "./hiragana-mo.png";
+import hiragana_ya from "./hiragana-ya.png";
+import hiragana_yu from "./hiragana-yu.png";
+import hiragana_yo from "./hiragana-yo.png";
+import hiragana_ra from "./hiragana-ra.png";
+import hiragana_ri from "./hiragana-ri.png";
+import hiragana_ru from "./hiragana-ru.png";
+import hiragana_re from "./hiragana-re.png";
+import hiragana_ro from "./hiragana-ro.png";
+import hiragana_wa from "./hiragana-wa.png";
+import hiragana_wo from "./hiragana-wo.png";
+import hiragana_n from "./hiragana-n.png";
 
 export const Signimage = {
   A: Ki_sign,
@@ -239,11 +284,187 @@ export const Signpass = [
 ];
 export const SignAN = [
   {
-    src: Test_sign,
+    src: hiragana_a,
     alt: "A",
   },
   {
-    src: "い",
+    src: hiragana_i,
     alt: "I",
+  },
+  {
+    src: hiragana_u,
+    alt: "U",
+  },
+  {
+    src: hiragana_e,
+    alt: "E",
+  },
+  {
+    src: hiragana_o,
+    alt: "O",
+  },
+  {
+    src: hiragana_ka,
+    alt: "Ka",
+  },
+  {
+    src: hiragana_ki,
+    alt: "Ki",
+  },
+  {
+    src: hiragana_ku,
+    alt: "Ku",
+  },
+  {
+    src: hiragana_ke,
+    alt: "Ke",
+  },
+  {
+    src: hiragana_ko,
+    alt: "Ko",
+  },
+  {
+    src: hiragana_sa,
+    alt: "Sa",
+  },
+  {
+    src: hiragana_shi,
+    alt: "Shi",
+  },
+  {
+    src: hiragana_su,
+    alt: "Su",
+  },
+  {
+    src: hiragana_se,
+    alt: "Se",
+  },
+  {
+    src: hiragana_so,
+    alt: "So",
+  },
+  {
+    src: hiragana_ta,
+    alt: "Ta",
+  },
+  {
+    src: hiragana_chi,
+    alt: "Chi",
+  },
+  {
+    src: hiragana_tsu,
+    alt: "Tu",
+  },
+  {
+    src: hiragana_te,
+    alt: "Te",
+  },
+  {
+    src: hiragana_to,
+    alt: "To",
+  },
+  {
+    src: hiragana_na,
+    alt: "Na",
+  },
+  {
+    src: hiragana_ni,
+    alt: "Ni",
+  },
+  {
+    src: hiragana_nu,
+    alt: "Nu",
+  },
+  {
+    src: hiragana_ne,
+    alt: "Ne",
+  },
+  {
+    src: hiragana_no,
+    alt: ["Hi", "No2"],
+  },
+  {
+    src: hiragana_ha,
+    alt: "Ha",
+  },
+  {
+    src: hiragana_hi,
+    alt: "Hi",
+  },
+  {
+    src: hiragana_fu,
+    alt: "Fu",
+  },
+  {
+    src: hiragana_he,
+    alt: "He",
+  },
+  {
+    src: hiragana_ho,
+    alt: "Ho",
+  },
+  {
+    src: hiragana_ma,
+    alt: "Ma",
+  },
+  {
+    src: hiragana_mi,
+    alt: "Mi",
+  },
+  {
+    src: hiragana_mu,
+    alt: "Mu",
+  },
+  {
+    src: hiragana_me,
+    alt: "Me",
+  },
+  {
+    src: hiragana_mo,
+    alt: ["Mo1", "Nu"],
+  },
+  {
+    src: hiragana_ya,
+    alt: "Ya",
+  },
+  {
+    src: hiragana_yu,
+    alt: "Yu",
+  },
+  {
+    src: hiragana_yo,
+    alt: "Yo",
+  },
+  {
+    src: hiragana_ra,
+    alt: "Ra",
+  },
+  {
+    src: hiragana_ri,
+    alt: ["U", "Ni"],
+  },
+  {
+    src: hiragana_ru,
+    alt: "Ru",
+  },
+  {
+    src: hiragana_re,
+    alt: "Re",
+  },
+  {
+    src: hiragana_ro,
+    alt: "Ro",
+  },
+  {
+    src: hiragana_wa,
+    alt: "Wa",
+  },
+  {
+    src: hiragana_wo,
+    alt: ["O", "O"],
+  },
+  {
+    src: hiragana_n,
+    alt: ["No2", "So"],
   },
 ];
