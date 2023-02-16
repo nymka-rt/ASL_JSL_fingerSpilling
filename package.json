@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/Nyambayr/ASL_JSL_fingerSpilling.git",
   "name": "handpose",
   "version": "0.1.0",
   "private": true,
@@ -28,6 +29,8 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "dev": "next dev",
     "test": "react-scripts test",
     "build": "next build",
